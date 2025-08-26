@@ -49,8 +49,6 @@ const TicTacToe = () => {
       won(data[8]);
     } else if (data[0] === data[4] && data[4] === data[8] && data[8] !== "") {
       won(data[8]);
-    } else if (data[0] === data[1] && data[1] === data[2] && data[2] !== "") {
-      won(data[2]);
     } else if (data[2] === data[4] && data[4] === data[6] && data[6] !== "") {
       won(data[6]);
     }
@@ -88,4 +86,12 @@ const TicTacToe = () => {
         <div className="row3">
           <div className="boxes" ref={box7} onClick={(w) => { toggle(w, 6) }}></div>
           <div className="boxes" ref={box8} onClick={(w) => { toggle(w, 7) }}></div>
-          <div className="boxes" ref={box9} onClick={(w) => { toggle(w, 8) }}></div
+          <div className="boxes" ref={box9} onClick={(w) => { toggle(w, 8) }}></div>
+        </div>
+      </div>
+      <button className="reset" onClick={reset}>Reset</button>
+    </div>
+  );
+};
+
+export default TicTacToe;
